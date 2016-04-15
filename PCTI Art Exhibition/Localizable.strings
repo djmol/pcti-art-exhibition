@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  PCTI Art Exhibition
+
+  Created by Dan on 3/21/16.
+  Copyright © 2016 Passaic County Technical Institute. All rights reserved.
+*/
+
+
+// "KEY" = "CONTENT";
+
+"ALERT_RESPONSE_OK" = "OK";
+"ALERT_RESPONSE_CANCEL" = "Cancel";
+"ALERT_RESPONSE_SETTINGS" = "Settings";
+"ERROR_IBEACONS_NOT_SUPPORTED" = "iBeacons not supported";
+"ERROR_IBEACONS_NOT_SUPPORTED_DETAIL" = "Your device is not compatible with iBeacons. Please refer to the App Store documentation to learn what devices support iBeacons.";
+"ERROR_LOCATION_SERVICES_DISABLED" = "Location services disabled";
+"ERROR_LOCATION_SERVICES_DISABLED_DETAIL" = "Location services are required to use the Tour feature. To enable location services, visit the PCTI Art Show page in the Settings app.";
+"ERROR_LOCATION_SERVICES_DISABLED_DETAIL_WITH_SETTINGS" = "Location services are required to use the Tour feature. You can enable location services in the Privacy section of the Settings app.";
+"ERROR_NETWORK_UNAVAILABLE" = "Network unavailable";
+"ERROR_NETWORK_UNAVAILABLE_DETAIL" = "Please check your device's network connection and try again.";
+"ERROR_RANGING_UNAVAILABLE" = "Ranging unavailable";
+"ERROR_RANGING_UNAVAILABLE_DETAIL" = "Please ensure Bluetooth and location services are enabled on your device and try again.";
+"ERROR_LOCATION_UNKNOWN" = "Unable to obtain location";
+"ERROR_LOCATION_UNKNOWN_DETAIL" = "Location services is having trouble figuring out where you are. Please check your device settings and try again.";
+"ERROR_REGION_MONITORING" = "Unable to monitor region";
+"ERROR_REGION_MONITORING_DETAIL" = "Your device is having trouble monitoring the region. Please go to Settings > Bluetooth and restart your Bluetooth service.";
+"ERROR_EST_INVALID_REGION" = "Unable to range region";
+"ERROR_EST_INVALID_REGION_DETAIL" = "We can't find the right region to monitor. Please restart the app or check the App Store for updates.";
+"BEACON_MENU_IBEACONS_NOT_SUPPORTED" = "Your device does not support iBeacons.";
+"BEACON_MENU_NO_DATA_MANUAL_REFRESH" = "No data available.\n\nPlease approach a PCTI Art Show iBeacon\nand pull down or press the refresh button.";
+"BEACON_MENU_NO_DATA_AUTO_REFRESH" = "No data available.\n\nPlease approach a PCTI Art Show iBeacon.";
+"QUICK_ACTION_DIRECTIONS_TO_SHOW" = "Directions to Show";
+"TITLE_BEACON_MENU" = "Nearby";
+"TITLE_VISITOR_INFORMATION" = "Visitor Information";
+"TITLE_SETTINGS_TABLE" = "Settings";
+"SETTINGS_SECTION_HEADING_1" = "Tour Settings";
+"SETTINGS_SECTION_HEADING_2" = "";
+"SETTINGS_AUTOMATIC_SITE_UPDATE_LABEL" = "Automatically Update Tour Sites";
+"SETTINGS_REFRESH_RATE_LABEL" = "Refresh Rate";
+"SETTINGS_REFRESH_RATE_SEGMENT_SLOW" = "Slow";
+"SETTINGS_REFRESH_RATE_SEGMENT_MEDIUM" = "Medium";
+"SETTINGS_REFRESH_RATE_SEGMENT_FAST" = "Fast";
+"SETTINGS_VIEW_INTRODUCTION_LABEL" = "View Introduction";
+"INTRO_PAGE_1" = "Welcome to Passaic County Technical Institute's Festival of the Arts!";
+"INTRO_PAGE_2" = "This year's show is proudly hosted at the historic Lambert Castle.";
+"INTRO_PAGE_3" = "While you enjoy the show, select the artwork you're viewing in the Tour menu to learn more about it.";
+"INTRO_PAGE_4" = "Just enable Location Services and you're ready to begin your tour!";
+"INTRO_START_LOCATION_SERVICES_BUTTON" = "Start Location Services";
+"INTRO_CONTINUE_BUTTON" = "Continue";
+"VISITOR_INFORMATION_DIRECTIONS_LINK" = "Get Directions to the Show";

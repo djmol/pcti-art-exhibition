@@ -9,10 +9,11 @@
 #import "ArtSite.h"
 #import <UIKit/UIKit.h>
 
-@interface ArtworkViewController : UIViewController <UIActivityItemSource>
+@interface ArtworkViewController : UIViewController <UIActivityItemSource, UIScrollViewDelegate>
 
 - (void)setViewColorScheme;
 @property (nonatomic, weak) IBOutlet UIImageView *artImageView;
+@property (weak, nonatomic) IBOutlet UIScrollView *artImageScrollView;
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UITextView *bioTextView;
 @property (nonatomic, weak) IBOutlet UILabel *mediumLabel;

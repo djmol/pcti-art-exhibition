@@ -45,7 +45,14 @@
     } else {
         self.artImageView.contentMode = UIViewContentModeScaleAspectFit;
     }
-    self.artImageView.image = [UIImage imageNamed:[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkImage) stringValue]]];
+
+    // Set up artImageScrollView
+    UIImage *artImage = [UIImage imageNamed:[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkImage) stringValue]]];
+    self.artImageScrollView.maximumZoomScale = 5.0;
+    self.artImageScrollView.minimumZoomScale = 1.0;
+    self.artImageScrollView.delegate = self;
+    self.artImageView.image = artImage;
+    
     self.titleLabel.text = [self.artSite.siteInfo valueForKey:[@(ArtSiteTitle) stringValue]];
     self.bioTextView.text = [self.artSite.siteInfo valueForKey:[@(ArtSiteBio) stringValue]];
     self.mediumLabel.text = [self.artSite.siteInfo valueForKey:[@(ArtSiteMedium) stringValue]];
@@ -211,13 +218,24 @@
         self.navigationController.navigationBar.tintColor = self.contrastColor;
         self.tabBarController.tabBar.barTintColor = self.schemeColor;
         self.tabBarController.tabBar.tintColor = self.contrastColor;
-
     }
-    
     
     // Format BioTextView
     self.bioTextView.textContainer.lineFragmentPadding = 0;
     self.bioTextView.textContainerInset = UIEdgeInsetsZero;
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+
+    self.artImageScrollView.contentSize = self.artImageView.frame.size;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    NSLog(@"%f, %f, %f, %f",self.artImageView.frame.origin.x, self.artImageView.frame.origin.y, self.artImageView.frame.size.width, self.artImageView.frame.size.height);
+    NSLog(@"%f, %f, %f, %f",self.artImageScrollView.frame.origin.x, self.artImageScrollView.frame.origin.y, self.artImageScrollView.frame.size.width, self.artImageScrollView.frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -466,5 +484,14 @@
     
     return colorScheme[maxIndex];
 }
+
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    if (scrollView == self.artImageScrollView) {
+        return self.artImageView;
+    }
+    
+    return nil;
+}
+
 
 @end

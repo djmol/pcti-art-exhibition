@@ -65,7 +65,7 @@
 		<key>6</key>
 		<string>barreraliranzo_y_art</string>
 		<key>7</key>
-		<string>Fill</string>
+		<string>Fit</string>
 		<key>8</key>
 		<string>barreraliranzo_y.jpg</string>
 		<key>9</key>
@@ -157,7 +157,7 @@
 		<key>6</key>
 		<string>cox_n_art</string>
 		<key>7</key>
-		<string>Fill</string>
+		<string>Fit</string>
 		<key>8</key>
 		<string>cox_n.jpg</string>
 		<key>9</key>
@@ -180,7 +180,7 @@
 		<key>6</key>
 		<string>dixon_d_art</string>
 		<key>7</key>
-		<string>Fill</string>
+		<string>Fit</string>
 		<key>8</key>
 		<string>dixon_d.jpg</string>
 		<key>9</key>
@@ -387,7 +387,7 @@
 		<key>6</key>
 		<string>smith_c_art</string>
 		<key>7</key>
-		<string>Fill</string>
+		<string>Fit</string>
 		<key>8</key>
 		<string>smith_c.jpg</string>
 		<key>9</key>
@@ -433,7 +433,7 @@
 		<key>6</key>
 		<string>williams_s_art</string>
 		<key>7</key>
-		<string>Fill</string>
+		<string>Fit</string>
 		<key>8</key>
 		<string>williams_s.jpg</string>
 		<key>9</key>
@@ -456,7 +456,7 @@
 		<key>6</key>
 		<string>solis_jas_art</string>
 		<key>7</key>
-		<string>Fill</string>
+		<string>Fit</string>
 		<key>8</key>
 		<string>headshot-placeholder</string>
 		<key>9</key>

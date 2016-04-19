@@ -156,6 +156,8 @@
     /*dispatch_async(dispatch_get_main_queue(), ^{
         [NetworkingTools downloadImageFromURL:imageURL toView:self.artImageView withProgress:self.progressView];
     });*/
+    
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -189,6 +191,58 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 
+    // Set the height of our artImageScrollView
+    // (AutoLayout is a huge painus in my ainus, so manually doing it here is easier, even if it incurs magic numbers.)
+    // Landscape values were calculated, portrait values were eyeballed
+    CGFloat deviceHeight = [[UIScreen mainScreen] bounds].size.height;
+    if (deviceHeight == 1366) {
+        // iPad Pro
+        if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fill"]) {
+            // Landscape
+            self.artImageScrollViewHeight.constant = 662;
+        } else if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fit"]) {
+            // Portrait
+            self.artImageScrollViewHeight.constant = 880;
+        }
+    } else if (deviceHeight == 1024) {
+        // iPad
+        if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fill"]) {
+            // Landscape
+            self.artImageScrollViewHeight.constant = 497;
+        } else if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fit"]) {
+            // Portrait
+            self.artImageScrollViewHeight.constant = 538;
+        }
+    } else if (deviceHeight == 736) {
+        // iPhone 6+
+        if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fill"]) {
+            // Landscape
+            self.artImageScrollViewHeight.constant = 268;
+        } else if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fit"]) {
+            // Portrait
+            self.artImageScrollViewHeight.constant = 350;
+        }
+    } else if (deviceHeight == 667) {
+        // iPhone 6
+        if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fill"]) {
+            // Landscape
+            self.artImageScrollViewHeight.constant = 243;
+        } else if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fit"]) {
+            // Portrait
+            self.artImageScrollViewHeight.constant = 300;
+        }
+    } else if (deviceHeight == 568 || deviceHeight == 480) {
+        // iPhone 5S-4S
+        if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fill"]) {
+            // Landscape
+            self.artImageScrollViewHeight.constant = 207;
+        } else if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fit"]) {
+            // Portrait
+            self.artImageScrollViewHeight.constant = 250;
+        }
+    }
+    
+    // Set the content size so we can scroll and zoom on the image properly
     self.artImageScrollView.contentSize = self.artImageView.frame.size;
 }
 

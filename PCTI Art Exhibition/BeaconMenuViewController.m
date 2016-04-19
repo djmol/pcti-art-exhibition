@@ -495,12 +495,19 @@
        // Feature Site Table Cell, for closest beacon
        float screenHeight = [UIScreen mainScreen].bounds.size.height;
        if (screenHeight == 480) {
+           // iPhone 4S
            return 140;
        } else if (screenHeight == 568) {
+           // iPhone 5
            return 160;
        } else if (screenHeight == 667) {
-           return 165;
+           // iPhone 6
+           return 195;
+       } else if (screenHeight == 736) {
+           // iPhone 6+
+           return 210;
        } else if (screenHeight == 1024 || screenHeight == 1366) {
+           // iPad
            return 365;
        } else {
            return 210;
@@ -557,7 +564,7 @@
     [self.sitesTableView reloadData];
     
     // FOR DEVELOPMENT: Display all beacons
-    //self.sitesByDistance = [[NSMutableArray alloc] init]; for (NSString *beaconSite in self.sitesByBeacon) { [self.sitesByDistance addObject:[self.sitesByBeacon valueForKey:beaconSite]]; }
+    self.sitesByDistance = [[NSMutableArray alloc] init]; for (NSString *beaconSite in self.sitesByBeacon) { [self.sitesByDistance addObject:[self.sitesByBeacon valueForKey:beaconSite]]; }
     
     // Update sitesByListing so that it holds the currently displayed list of sites while sitesByDistance keeps updating
     self.sitesByListing = self.sitesByDistance;

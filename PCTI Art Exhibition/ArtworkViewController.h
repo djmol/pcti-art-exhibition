@@ -13,8 +13,10 @@
 
 - (void)setViewColorScheme;
 - (void)applyColorSchemeToViewNavigationBarAndTabBar;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIImageView *artImageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *artImageScrollView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *artImageScrollViewHeight;
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UITextView *bioTextView;
 @property (nonatomic, weak) IBOutlet UILabel *mediumLabel;

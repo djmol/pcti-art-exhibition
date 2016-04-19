@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PCTI Art Exhibition/BeaconMenuViewController.m"
-            timestampString = "482333725.603409"
+            timestampString = "482690535.195529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "534"
-            endingLineNumber = "534"
+            startingLineNumber = "541"
+            endingLineNumber = "541"
             landmarkName = "-reloadSitesDataWithAnimation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PCTI Art Exhibition/BeaconMenuViewController.m"
-            timestampString = "482333725.603409"
+            timestampString = "482699630.324125"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "672"
-            endingLineNumber = "672"
+            startingLineNumber = "676"
+            endingLineNumber = "676"
             landmarkName = "-scrollViewDidScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PCTI Art Exhibition/BeaconMenuViewController.m"
-            timestampString = "482333725.603409"
+            timestampString = "482680137.633305"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "460"
-            endingLineNumber = "460"
+            startingLineNumber = "463"
+            endingLineNumber = "463"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PCTI Art Exhibition/BeaconMenuViewController.m"
-            timestampString = "482333725.603409"
+            timestampString = "482699630.324125"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "557"
-            endingLineNumber = "557"
+            startingLineNumber = "561"
+            endingLineNumber = "561"
             landmarkName = "-reloadSitesDataWithAnimation:"
             landmarkType = "5">
          </BreakpointContent>

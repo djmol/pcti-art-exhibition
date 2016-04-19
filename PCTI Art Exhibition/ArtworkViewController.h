@@ -12,6 +12,7 @@
 @interface ArtworkViewController : UIViewController <UIActivityItemSource, UIScrollViewDelegate>
 
 - (void)setViewColorScheme;
+- (void)applyColorSchemeToViewNavigationBarAndTabBar;
 @property (nonatomic, weak) IBOutlet UIImageView *artImageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *artImageScrollView;
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;

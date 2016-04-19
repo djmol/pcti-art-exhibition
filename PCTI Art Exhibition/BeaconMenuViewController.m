@@ -263,7 +263,7 @@
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"settingAutoUpdate"]) {
         self.autoUpdateCount++;
-        NSLog(@"%d",self.autoUpdateCount);
+        //NSLog(@"%d",self.autoUpdateCount);
         // This 10 should be set to the max value of SettingsTableViewController's refreshRateSlider + 1, but it was a last-minute addition, so...
         if (self.autoUpdateCount >=  11 - [[[NSUserDefaults standardUserDefaults] valueForKey:@"autoUpdateRefreshRate"] floatValue]) {
             [self reloadSitesDataWithoutAnimation];
@@ -389,6 +389,9 @@
             if (screenHeight == 480 || screenHeight == 568) {
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"FeatureSiteTableCellSmall" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
+            } else if (screenHeight == 1024 || screenHeight == 1366) {
+                NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"FeatureSiteTableCellLarge" owner:self options:nil];
+                cell = [nib objectAtIndex:0];
             } else {
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"FeatureSiteTableCell" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
@@ -491,10 +494,14 @@
     if (indexPath.row == 0) {
        // Feature Site Table Cell, for closest beacon
        float screenHeight = [UIScreen mainScreen].bounds.size.height;
-       if (screenHeight == 480 || screenHeight == 568) {
+       if (screenHeight == 480) {
            return 140;
+       } else if (screenHeight == 568) {
+           return 160;
        } else if (screenHeight == 667) {
            return 165;
+       } else if (screenHeight == 1024 || screenHeight == 1366) {
+           return 365;
        } else {
            return 210;
        }
@@ -550,10 +557,7 @@
     [self.sitesTableView reloadData];
     
     // FOR DEVELOPMENT: Display all beacons
-    /*self.sitesByDistance = [[NSMutableArray alloc] init];
-    for (NSString *beaconSite in self.sitesByBeacon) {
-        [self.sitesByDistance addObject:[self.sitesByBeacon valueForKey:beaconSite]];
-    }*/
+    //self.sitesByDistance = [[NSMutableArray alloc] init]; for (NSString *beaconSite in self.sitesByBeacon) { [self.sitesByDistance addObject:[self.sitesByBeacon valueForKey:beaconSite]]; }
     
     // Update sitesByListing so that it holds the currently displayed list of sites while sitesByDistance keeps updating
     self.sitesByListing = self.sitesByDistance;
@@ -803,9 +807,9 @@
         [navigationController popToRootViewControllerAnimated:false];
         ArtworkViewController *artworkViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Artwork"];
         artworkViewController.artSite = [[ArtSite alloc] initWithSiteInfo:selectedSite];
-        //[artworkViewController setViewColorScheme];
         [navigationController pushViewController:artworkViewController animated:NO];
         [(ArtworkViewController *)[[navigationController childViewControllers] objectAtIndex:1] setViewColorScheme];
+        [(ArtworkViewController *)[[navigationController childViewControllers] objectAtIndex:1] applyColorSchemeToViewNavigationBarAndTabBar];
         return tabBarController;
     }
     return nil;

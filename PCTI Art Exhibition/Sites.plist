@@ -15,7 +15,7 @@
 		<key>4</key>
 		<string>-</string>
 		<key>5</key>
-		<string> </string>
+		<string>Whoops! Try refreshing the Tour menu.</string>
 		<key>6</key>
 		<string>placeholder.png</string>
 		<key>7</key>
@@ -24,6 +24,29 @@
 		<string>headshot-placeholder</string>
 		<key>9</key>
 		<string>placeholder.png</string>
+	</dict>
+	<key>y:y</key>
+	<dict>
+		<key>0</key>
+		<string>y:y</string>
+		<key>1</key>
+		<string>Storm the Tower</string>
+		<key>2</key>
+		<string>Photoshop</string>
+		<key>3</key>
+		<string> </string>
+		<key>4</key>
+		<string>PCTI Student</string>
+		<key>5</key>
+		<string>I have been practicing in the Graphic Arts field for a total of four years. I take pride in my work. Using the Graphic Arts design shop that Passaic County Technical Institute offered me, I made sure to make use of my time and utilize all of the skills that I have learned in Adobe Photoshop, Illustrator, and InDesign.</string>
+		<key>6</key>
+		<string>dixon_d_art</string>
+		<key>7</key>
+		<string>Fill</string>
+		<key>8</key>
+		<string>silhouette</string>
+		<key>9</key>
+		<string>ga_banner</string>
 	</dict>
 	<key>4144:10006</key>
 	<dict>
@@ -268,7 +291,7 @@
 		<key>4</key>
 		<string>Ronny Montilla</string>
 		<key>5</key>
-		<string>-</string>
+		<string>My name is Ronny Montilla. I first wanted to become an Graphic Artist during my freshman year of high school but decided to pursue a career in science. I still like the aspects of Graphic Design. To me, it provides a way to test my creative ideas. I would like to take the skills and experiences from Graphic Arts and use it as an alternative for a job, just in case.</string>
 		<key>6</key>
 		<string>montilla_r_art</string>
 		<key>7</key>

@@ -31,7 +31,7 @@
                         NSLocalizedString(@"INTRO_PAGE_2", nil),
                         NSLocalizedString(@"INTRO_PAGE_3", nil),
                         NSLocalizedString(@"INTRO_PAGE_4", nil),];
-    self.imageFiles = @[@"pcvc",@"pcvc",@"pcvc",@"pcvc"];
+    self.imageFiles = @[@"intro-logo",@"intro-castle",@"intro-tour",@"intro-location"];
     self.backgroundColors = @[[UIColor colorWithHexString:@"2799D5"],
                               [UIColor colorWithHexString:@"8BC53F"],
                               [UIColor colorWithHexString:@"F6921E"],

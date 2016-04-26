@@ -32,7 +32,7 @@
 		7B7A2CBB1C8F285600896D05 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A2CBA1C8F285600896D05 /* SettingsTableViewController.m */; };
 		7B7A2CC11C8F438D00896D05 /* RotationUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A2CC01C8F438D00896D05 /* RotationUITabBarController.m */; };
 		7B955B7C1C454558008733B4 /* Resources.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B955B7B1C454558008733B4 /* Resources.plist */; };
-		7B955B7F1C454AED008733B4 /* NetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B955B7E1C454AED008733B4 /* NetworkingTools.m */; };
+		7BB9AC921CC516F800F54D73 /* FeatureSiteTableCellLarge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB9AC911CC516F800F54D73 /* FeatureSiteTableCellLarge.xib */; };
 		7BE90B021C3D81AE00414F0F /* SiteTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BE90B011C3D81AE00414F0F /* SiteTableCell.xib */; };
 		7BE90B051C3D846000414F0F /* SiteTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE90B041C3D846000414F0F /* SiteTableCell.m */; };
 		7BE90B0B1C3FF11C00414F0F /* ArtworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE90B091C3FF11C00414F0F /* ArtworkViewController.m */; };
@@ -84,8 +84,7 @@
 		7B7A2CBF1C8F438D00896D05 /* RotationUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationUITabBarController.h; sourceTree = "<group>"; };
 		7B7A2CC01C8F438D00896D05 /* RotationUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationUITabBarController.m; sourceTree = "<group>"; };
 		7B955B7B1C454558008733B4 /* Resources.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Resources.plist; sourceTree = "<group>"; };
-		7B955B7D1C454AED008733B4 /* NetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingTools.h; sourceTree = "<group>"; };
-		7B955B7E1C454AED008733B4 /* NetworkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingTools.m; sourceTree = "<group>"; };
+		7BB9AC911CC516F800F54D73 /* FeatureSiteTableCellLarge.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeatureSiteTableCellLarge.xib; sourceTree = "<group>"; };
 		7BE90B011C3D81AE00414F0F /* SiteTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiteTableCell.xib; sourceTree = "<group>"; };
 		7BE90B031C3D846000414F0F /* SiteTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteTableCell.h; sourceTree = "<group>"; };
 		7BE90B041C3D846000414F0F /* SiteTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteTableCell.m; sourceTree = "<group>"; };
@@ -182,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				7B644CD61CAAD15000CBC7E7 /* FeatureSiteTableCellSmall.xib */,
+				7BB9AC911CC516F800F54D73 /* FeatureSiteTableCellLarge.xib */,
 				7B679E031C404AB900AD31BF /* FeatureSiteTableCell.xib */,
 				7B679E051C40509800AD31BF /* FeatureSiteTableCell.h */,
 				7B679E061C40509800AD31BF /* FeatureSiteTableCell.m */,
@@ -198,8 +198,6 @@
 		7B955B811C454B22008733B4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				7B955B7D1C454AED008733B4 /* NetworkingTools.h */,
-				7B955B7E1C454AED008733B4 /* NetworkingTools.m */,
 				7B14AA191C98927100E936C7 /* UIImage+Overlay.h */,
 				7B14AA1A1C98927100E936C7 /* UIImage+Overlay.m */,
 				7B0C99E61CA0178F001D15DD /* SLColorArt.h */,
@@ -297,6 +295,7 @@
 				7B644CD71CAAD15000CBC7E7 /* FeatureSiteTableCellSmall.xib in Resources */,
 				7B14AA1D1C99A4C800E936C7 /* Sites.plist in Resources */,
 				7B955B7C1C454558008733B4 /* Resources.plist in Resources */,
+				7BB9AC921CC516F800F54D73 /* FeatureSiteTableCellLarge.xib in Resources */,
 				7B679E041C404AB900AD31BF /* FeatureSiteTableCell.xib in Resources */,
 				7B5FDBEB1C3C10810074590A /* LaunchScreen.storyboard in Resources */,
 				7BFBAF391CA325C100457097 /* InfoTableCell.xib in Resources */,
@@ -363,7 +362,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5FDBE31C3C10810074590A /* BeaconMenuViewController.m in Sources */,
-				7B955B7F1C454AED008733B4 /* NetworkingTools.m in Sources */,
 				7B5FDBE01C3C10810074590A /* AppDelegate.m in Sources */,
 				7B566A6E1C872953003A9531 /* IntroPageContentViewController.m in Sources */,
 				7B0C99EE1CA017F5001D15DD /* UIImage+Scale.m in Sources */,
@@ -443,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -481,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -8,12 +8,12 @@
 
 #import "AppDelegate.h"
 #import "ArtworkViewController.h"
-#import "NetworkingTools.h"
+//#import "NetworkingTools.h"
 #import "RotationUITabBarController.h"
 #import "UIImage+ColorArt.h"
-#import <PINRemoteImage/PINRemoteImage.h>
-#import <PINRemoteImage/UIImageView+PINRemoteImage.h>
-#import <PINCache/PINCache.h>
+//#import <PINRemoteImage/PINRemoteImage.h>
+//#import <PINRemoteImage/UIImageView+PINRemoteImage.h>
+//#import <PINCache/PINCache.h>
 #import <ChameleonFramework/Chameleon.h>
 
 // Used in Custom Animation (Navigation Bar Color)
@@ -45,7 +45,14 @@
     } else {
         self.artImageView.contentMode = UIViewContentModeScaleAspectFit;
     }
-    self.artImageView.image = [UIImage imageNamed:[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkImage) stringValue]]];
+
+    // Set up artImageScrollView
+    UIImage *artImage = [UIImage imageNamed:[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkImage) stringValue]]];
+    self.artImageScrollView.maximumZoomScale = 5.0;
+    self.artImageScrollView.minimumZoomScale = 1.0;
+    self.artImageScrollView.delegate = self;
+    self.artImageView.image = artImage;
+    
     self.titleLabel.text = [self.artSite.siteInfo valueForKey:[@(ArtSiteTitle) stringValue]];
     self.bioTextView.text = [self.artSite.siteInfo valueForKey:[@(ArtSiteBio) stringValue]];
     self.mediumLabel.text = [self.artSite.siteInfo valueForKey:[@(ArtSiteMedium) stringValue]];
@@ -59,51 +66,10 @@
     //[self.bioTextView sizeToFit];
     
     // Set navigation bar and tab bar color
-    // Get color scheme colors
+    // Determine and set color scheme colors
+    [self setViewColorScheme];
     
-    /* You could also use SLColorArt, but the color schemes come out ugly when there's a white background:
-    SLColorArt *colorArt = [[UIImage imageNamed:[self.siteInfo valueForKey:@"ArtworkImage"]] colorArt];
-    self.schemeColor = colorArt.backgroundColor;
-    self.contrastColor = colorArt.primaryColor;
-    self.unselectedColor = colorArt.secondaryColor;
-    self.unselectedOpaqueColor = colorArt.secondaryColor; */
-    
-    // Get color scheme based on artwork image
-    self.colorScheme = [[NSMutableArray alloc] initWithArray: ColorsFromImage([UIImage imageNamed:[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkImage) stringValue]]], FALSE)];
-    
-    // Get the most colorful color in the color scheme! (This is optional and kind of silly but WHATEVER.)
-    self.schemeColor = [self mostColorfulInScheme:self.colorScheme];
-    
-    // Get secondary scheme color
-    UIColor *secondaryColor = AverageColorFromImage([UIImage imageNamed:[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkImage) stringValue]]]);
-    UIColor *secondaryContrastColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:secondaryColor isFlat:FALSE alpha:1.0];
-    
-    // Ensure that the contrast color will always be readable by gradually lightening the secondary color
-    UIColor *whiteColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:[UIColor blackColor] isFlat:FALSE alpha:1.0];
-    int lightenCount = 0;
-    int maxLightenAttempt = 70;
-    while ([secondaryContrastColor isEqual:whiteColor] && lightenCount < maxLightenAttempt) {
-        secondaryColor = [secondaryColor lightenByPercentage:.01];
-        secondaryContrastColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:secondaryColor isFlat:FALSE alpha:1.0];
-        lightenCount++;
-    }
-    if (lightenCount >= maxLightenAttempt) {
-        secondaryColor = [UIColor whiteColor];
-    }
-    
-    self.contrastColor = secondaryColor;
-    self.unselectedColor = whiteColor;
-    self.unselectedOpaqueColor = whiteColor; //separate opaque/not-opaque in case we wanted to make unselected tab bar color translucent
-    
-    // If a placeholder/error site shows up, set the color scheme to the normal app color scheme
-    if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteTitle) stringValue]] isEqualToString:@"-"] && [[self.artSite.siteInfo valueForKey:[@(ArtSiteArtist) stringValue]] isEqualToString:@"-"]) {
-        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        self.schemeColor = appDelegate.mainColor;
-        self.contrastColor = appDelegate.mainTintColor;
-        self.unselectedColor = whiteColor;
-        self.unselectedOpaqueColor = whiteColor;
-    }
-    
+    // (Some unused functions that might be useful one day...)
     // Get contrast color (either black or white) based on our scheme color
     /*self.contrastColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:self.schemeColor isFlat:FALSE alpha:1.0]; // Their macro for this is broken, I think.
     
@@ -125,7 +91,6 @@
     /*self.navigationController.navigationBar.barTintColor = self.schemeColor;
     self.navigationController.navigationBar.tintColor = self.contrastColor;
     
-    
     // We can do the tab bar animation juuuust fine, though
     [UIView transitionWithView:self.navigationController.tabBarController.tabBar
                       duration:0.3
@@ -142,7 +107,10 @@
     for (UITabBarItem *item in self.tabBarController.tabBar.items) {
         [tabBarItems addObject:item];
     }*/
-
+    
+    
+    
+    // (Download version)
     // Get image URL
     /*NSDictionary *resourceDict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle]  pathForResource:@"Resources" ofType:@"plist"]];
     NSMutableString *imageURLString = [[NSMutableString alloc] initWithString:[resourceDict valueForKey:@"URLPrefix"]];
@@ -188,6 +156,8 @@
     /*dispatch_async(dispatch_get_main_queue(), ^{
         [NetworkingTools downloadImageFromURL:imageURL toView:self.artImageView withProgress:self.progressView];
     });*/
+    
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -211,13 +181,69 @@
         self.navigationController.navigationBar.tintColor = self.contrastColor;
         self.tabBarController.tabBar.barTintColor = self.schemeColor;
         self.tabBarController.tabBar.tintColor = self.contrastColor;
-
     }
-    
     
     // Format BioTextView
     self.bioTextView.textContainer.lineFragmentPadding = 0;
     self.bioTextView.textContainerInset = UIEdgeInsetsZero;
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+
+    // Set the height of our artImageScrollView
+    // (AutoLayout is a huge painus in my ainus, so manually doing it here is easier, even if it incurs magic numbers.)
+    // Landscape values were calculated, portrait values were eyeballed
+    CGFloat deviceHeight = [[UIScreen mainScreen] bounds].size.height;
+    if (deviceHeight == 1366) {
+        // iPad Pro
+        if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fill"]) {
+            // Landscape
+            self.artImageScrollViewHeight.constant = 662;
+        } else if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fit"]) {
+            // Portrait
+            self.artImageScrollViewHeight.constant = 880;
+        }
+    } else if (deviceHeight == 1024) {
+        // iPad
+        if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fill"]) {
+            // Landscape
+            self.artImageScrollViewHeight.constant = 497;
+        } else if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fit"]) {
+            // Portrait
+            self.artImageScrollViewHeight.constant = 538;
+        }
+    } else if (deviceHeight == 736) {
+        // iPhone 6+
+        if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fill"]) {
+            // Landscape
+            self.artImageScrollViewHeight.constant = 268;
+        } else if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fit"]) {
+            // Portrait
+            self.artImageScrollViewHeight.constant = 350;
+        }
+    } else if (deviceHeight == 667) {
+        // iPhone 6
+        if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fill"]) {
+            // Landscape
+            self.artImageScrollViewHeight.constant = 243;
+        } else if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fit"]) {
+            // Portrait
+            self.artImageScrollViewHeight.constant = 300;
+        }
+    } else if (deviceHeight == 568 || deviceHeight == 480) {
+        // iPhone 5S-4S
+        if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fill"]) {
+            // Landscape
+            self.artImageScrollViewHeight.constant = 207;
+        } else if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkViewMode) stringValue]] isEqualToString:@"Fit"]) {
+            // Portrait
+            self.artImageScrollViewHeight.constant = 250;
+        }
+    }
+    
+    // Set the content size so we can scroll and zoom on the image properly
+    self.artImageScrollView.contentSize = self.artImageView.frame.size;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -402,7 +428,7 @@
     // setTitleTextAttributes:@{ NSForegroundColorAttributeName : self.contrastColor } forState:UIControlStateSelected];
     
     // Set colors if we're not using a transition
-    self.colorScheme = [[NSMutableArray alloc] initWithArray: ColorsFromImage([UIImage imageNamed:[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkImage) stringValue]]], FALSE)];
+    /*self.colorScheme = [[NSMutableArray alloc] initWithArray: ColorsFromImage([UIImage imageNamed:[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkImage) stringValue]]], FALSE)];
     
     // Get the most colorful color in the color scheme! (This is optional and kind of silly but WHATEVER.)
     self.schemeColor = [self mostColorfulInScheme:self.colorScheme];
@@ -427,11 +453,58 @@
     self.contrastColor = secondaryColor;
     self.unselectedColor = whiteColor;
     self.unselectedOpaqueColor = whiteColor;
+    */
     
-    self.navigationController.navigationBar.barTintColor = self.schemeColor;
-    self.navigationController.navigationBar.tintColor = self.contrastColor;
-    self.tabBarController.tabBar.barTintColor = self.schemeColor;
-    self.tabBarController.tabBar.tintColor = self.contrastColor;
+    //You could also use SLColorArt, but the color schemes come out ugly when there's a white background:
+    SLColorArt *colorArt = [[UIImage imageNamed:[self.artSite.siteInfo valueForKey:[@(ArtSiteArtworkImage) stringValue]]] colorArt];
+    
+    self.schemeColor = colorArt.backgroundColor;
+    
+    // Ensure that we can always read white on the background color by gradually darkening it
+    UIColor *schemeContrastColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:self.schemeColor isFlat:FALSE alpha:1.0];
+    UIColor *blackColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:[UIColor whiteColor] isFlat:FALSE alpha:1.0];
+    int darkenCount = 0;
+    int maxDarkenAttempt = 70;
+    while ([schemeContrastColor isEqual:blackColor] && darkenCount < maxDarkenAttempt) {
+        self.schemeColor = [self.schemeColor darkenByPercentage:.01];
+        schemeContrastColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:self.schemeColor isFlat:FALSE alpha:1.0];
+        darkenCount++;
+    }
+    if (darkenCount >= maxDarkenAttempt) {
+        self.schemeColor = [UIColor blackColor];
+    }
+    
+    self.contrastColor = colorArt.primaryColor;
+    self.unselectedColor = colorArt.secondaryColor;
+    self.unselectedOpaqueColor = colorArt.secondaryColor;
+    
+    // If we "miss" on any colors (like, if there's no image set) set default app colors
+    if (self.schemeColor == nil || self.contrastColor == nil) {
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        self.schemeColor = appDelegate.mainColor;
+        self.contrastColor = appDelegate.mainTintColor;
+        self.unselectedColor = [UIColor whiteColor];
+        self.unselectedOpaqueColor = [UIColor whiteColor];
+    }
+    
+    // If a placeholder/error site shows up, set the color scheme to the normal app color scheme
+    if ([[self.artSite.siteInfo valueForKey:[@(ArtSiteTitle) stringValue]] isEqualToString:@"-"] && [[self.artSite.siteInfo valueForKey:[@(ArtSiteArtist) stringValue]] isEqualToString:@"-"]) {
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        self.schemeColor = appDelegate.mainColor;
+        self.contrastColor = appDelegate.mainTintColor;
+        self.unselectedColor = [UIColor whiteColor];
+        self.unselectedOpaqueColor = [UIColor whiteColor];
+    }
+}
+
+- (void)applyColorSchemeToViewNavigationBarAndTabBar {
+    // Set navigation and tab bar colors if they exist
+    if (self.schemeColor != nil && self.contrastColor) {
+        self.navigationController.navigationBar.barTintColor = self.schemeColor;
+        self.navigationController.navigationBar.tintColor = self.contrastColor;
+        self.tabBarController.tabBar.barTintColor = self.schemeColor;
+        self.tabBarController.tabBar.tintColor = self.contrastColor;
+    }
 }
 
 - (UIColor *)mostColorfulInScheme:(NSArray *)colorScheme {
@@ -466,5 +539,14 @@
     
     return colorScheme[maxIndex];
 }
+
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    if (scrollView == self.artImageScrollView) {
+        return self.artImageView;
+    }
+    
+    return nil;
+}
+
 
 @end

@@ -164,7 +164,7 @@
 
 	if ( primaryColor == nil )
 	{
-		NSLog(@"missed primary");
+		//NSLog(@"missed primary");
 		if ( darkBackground )
 			primaryColor = [UIColor whiteColor];
 		else
@@ -173,7 +173,7 @@
 
 	if ( secondaryColor == nil )
 	{
-		NSLog(@"missed secondary");
+		//NSLog(@"missed secondary");
 		if ( darkBackground )
 			secondaryColor = [UIColor whiteColor];
 		else
@@ -182,7 +182,7 @@
 
 	if ( detailColor == nil )
 	{
-		NSLog(@"missed detail");
+		//NSLog(@"missed detail");
 		if ( darkBackground )
 			detailColor = [UIColor whiteColor];
 		else

@@ -19,10 +19,11 @@
     self.titleLabel.text = self.titleText;
 
     // Set page image based on screen width
-    NSNumber *screenWidth = @([UIScreen mainScreen].bounds.size.width);
-    NSString *imageName;
+    //NSNumber *screenWidth = @([UIScreen mainScreen].bounds.size.width);
+    NSString *imageName = self.imageFile;
     
-    if ([screenWidth intValue] == 320) {
+    // This was used to set different images for different screen sizes
+    /*if ([screenWidth intValue] == 320) {
         NSNumber *screenHeight = @([UIScreen mainScreen].bounds.size.height);
         if ([screenHeight intValue] == 480) {
             imageName = [NSString stringWithFormat:@"%@-%@w4", self.imageFile, screenWidth];
@@ -31,7 +32,7 @@
         }
     } else {
         imageName = [NSString stringWithFormat:@"%@-%@w", self.imageFile, screenWidth];
-    }
+    }*/
     
     UIImage *image = [UIImage imageNamed:imageName];
     [self.pageImageView setImage:image];

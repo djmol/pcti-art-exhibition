@@ -14,10 +14,10 @@
 #import "ArtworkViewController.h"
 #import "IntroViewController.h"
 #import "RotationUITabBarController.h"
-#import "NetworkingTools.h"
-#import <PINRemoteImage/PINRemoteImage.h>
-#import <PINRemoteImage/UIImageView+PINRemoteImage.h>
-#import <PINCache/PINCache.h>
+//#import "NetworkingTools.h"
+//#import <PINRemoteImage/PINRemoteImage.h>
+//#import <PINRemoteImage/UIImageView+PINRemoteImage.h>
+//#import <PINCache/PINCache.h>
 #import <EstimoteSDK/EstimoteSDK.h>
 #import <ChameleonFramework/Chameleon.h>
 
@@ -260,7 +260,7 @@
 
 - (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
     self.sitesByDistance = [self getSitesByBeacons:beacons];
-    
+
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"settingAutoUpdate"]) {
         self.autoUpdateCount++;
         //NSLog(@"%d",self.autoUpdateCount);
@@ -564,10 +564,11 @@
     [self.sitesTableView reloadData];
     
     // FOR DEVELOPMENT: Display all beacons
-    self.sitesByDistance = [[NSMutableArray alloc] init]; for (NSString *beaconSite in self.sitesByBeacon) { [self.sitesByDistance addObject:[self.sitesByBeacon valueForKey:beaconSite]]; }
+    //self.sitesByDistance = [[NSMutableArray alloc] init]; for (NSString *beaconSite in self.sitesByBeacon) { [self.sitesByDistance addObject:[self.sitesByBeacon valueForKey:beaconSite]]; }
     
     // Update sitesByListing so that it holds the currently displayed list of sites while sitesByDistance keeps updating
-    self.sitesByListing = self.sitesByDistance;
+    //self.sitesByListing = self.sitesByDistance;
+    self.sitesByListing = [NSMutableArray arrayWithArray:self.sitesByDistance];
     
     // If it's animated, set a bit of a delay to show it's working...
     if (animation) {
@@ -758,9 +759,9 @@
     }
     
     // Redownload Sites.plist
-    dispatch_async(dispatch_get_main_queue(), ^{
+    /*dispatch_async(dispatch_get_main_queue(), ^{
         [NetworkingTools downloadPlistFromURL:self.fileURL notifyAt:@"PlistDownloadNotification"];
-    });
+    });*/
     
     // Get general image URL prefix
     NSDictionary *resourceDict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle]  pathForResource:@"Resources" ofType:@"plist"]];
@@ -771,8 +772,8 @@
         artSite.siteInfo = [self.sitesByBeacon valueForKey:key];
         // Create image URL and manually empty cache
         [imageURLString appendString:[artSite.siteInfo valueForKey:[@(ArtSiteArtworkImage) stringValue]]];
-        NSURL *imageURL = [NSURL URLWithString:imageURLString];
-        [[[PINRemoteImageManager sharedImageManager] cache] removeObjectForKey:[[PINRemoteImageManager sharedImageManager] cacheKeyForURL:imageURL processorKey:nil]];
+        //NSURL *imageURL = [NSURL URLWithString:imageURLString];
+        //[[[PINRemoteImageManager sharedImageManager] cache] removeObjectForKey:[[PINRemoteImageManager sharedImageManager] cacheKeyForURL:imageURL processorKey:nil]];
     }
 }
 

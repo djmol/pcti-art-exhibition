@@ -8,12 +8,12 @@
 
 #import "AppDelegate.h"
 #import "ArtworkViewController.h"
-#import "NetworkingTools.h"
+//#import "NetworkingTools.h"
 #import "RotationUITabBarController.h"
 #import "UIImage+ColorArt.h"
-#import <PINRemoteImage/PINRemoteImage.h>
-#import <PINRemoteImage/UIImageView+PINRemoteImage.h>
-#import <PINCache/PINCache.h>
+//#import <PINRemoteImage/PINRemoteImage.h>
+//#import <PINRemoteImage/UIImageView+PINRemoteImage.h>
+//#import <PINCache/PINCache.h>
 #import <ChameleonFramework/Chameleon.h>
 
 // Used in Custom Animation (Navigation Bar Color)

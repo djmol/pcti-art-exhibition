@@ -26,6 +26,7 @@
 // Beacon stuff
 @property (nonatomic) CLBeaconRegion *beaconRegion;
 @property (nonatomic) NSMutableArray *sitesByDistance; // An array of beacons, constantly being updated as beacons are being ranged
+@property (nonatomic) NSMutableArray *sitesForListing; // An array of beacons, a snapshot of sitesByDistance used to update sitesTableView
 @property (nonatomic) NSMutableArray *sitesByListing; // An array of strings that holds sitesByBeacon's values, matching the order shown on sitesTableView
 @property (nonatomic) NSDictionary *sitesByBeacon; // Immutable nested dictionaries, key = major:minor, value = all pertinent information in another dictionary
 @property (nonatomic) NSDictionary *selectedSite;
@@ -372,7 +373,7 @@
 #pragma mark - Table View
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.sitesByDistance count];
+    return [self.sitesForListing count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -401,8 +402,8 @@
         // Get site information for cell
         ArtSite *artSite = [[ArtSite alloc] init];
         
-        if (self.sitesByDistance.count > indexPath.row) {
-            artSite.siteInfo = [[NSDictionary alloc] initWithDictionary:[self.sitesByDistance objectAtIndex:indexPath.row]];
+        if (self.sitesForListing.count > indexPath.row) {
+            artSite.siteInfo = [[NSDictionary alloc] initWithDictionary:[self.sitesForListing objectAtIndex:indexPath.row]];
         } else {
             // Use default/error/dummy information
             artSite.siteInfo = [[NSDictionary alloc] initWithDictionary:[self.sitesByBeacon objectForKey:@"x:x"]];
@@ -451,8 +452,8 @@
         // Get site information for cell
         ArtSite *artSite = [[ArtSite alloc] init];
         
-        if (self.sitesByDistance.count > indexPath.row) {
-            artSite.siteInfo = [[NSDictionary alloc] initWithDictionary:[self.sitesByDistance objectAtIndex:indexPath.row]];
+        if (self.sitesForListing.count > indexPath.row) {
+            artSite.siteInfo = [[NSDictionary alloc] initWithDictionary:[self.sitesForListing objectAtIndex:indexPath.row]];
         } else {
             // Use default/error/dummy information
             artSite.siteInfo = [[NSDictionary alloc] initWithDictionary:[self.sitesByBeacon objectForKey:@"x:x"]];
@@ -561,14 +562,14 @@
     }
     
     // Reload data in sitesTableView
+    self.sitesForListing = self.sitesByDistance;
     [self.sitesTableView reloadData];
     
     // FOR DEVELOPMENT: Display all beacons
-    //self.sitesByDistance = [[NSMutableArray alloc] init]; for (NSString *beaconSite in self.sitesByBeacon) { [self.sitesByDistance addObject:[self.sitesByBeacon valueForKey:beaconSite]]; }
+    //self.sitesForListing = [[NSMutableArray alloc] init]; for (NSString *beaconSite in self.sitesByBeacon) { [self.sitesForListing addObject:[self.sitesByBeacon valueForKey:beaconSite]]; }
     
     // Update sitesByListing so that it holds the currently displayed list of sites while sitesByDistance keeps updating
-    //self.sitesByListing = self.sitesByDistance;
-    self.sitesByListing = [NSMutableArray arrayWithArray:self.sitesByDistance];
+    self.sitesByListing = self.sitesForListing;
     
     // If it's animated, set a bit of a delay to show it's working...
     if (animation) {
@@ -703,7 +704,7 @@
     // Return the number of sections.
     NSInteger numSections = 0;
     
-    if (self.sitesByDistance.count > 0) {
+    if (self.sitesForListing.count > 0) {
         self.sitesTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.sitesTableView.backgroundView = nil;
         self.sitesTableView.backgroundColor = nil;

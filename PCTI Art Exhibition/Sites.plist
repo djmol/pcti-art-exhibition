@@ -67,7 +67,7 @@
 		<key>7</key>
 		<string>Fit</string>
 		<key>8</key>
-		<string>barreraliranzo_y.jpg</string>
+		<string>headshot-placeholder</string>
 		<key>9</key>
 		<string>ga_banner</string>
 	</dict>
@@ -113,7 +113,7 @@
 		<key>7</key>
 		<string>Fill</string>
 		<key>8</key>
-		<string>clancy_m.jpg</string>
+		<string>headshot-placeholder</string>
 		<key>9</key>
 		<string>ga_banner</string>
 	</dict>
@@ -182,7 +182,7 @@
 		<key>7</key>
 		<string>Fit</string>
 		<key>8</key>
-		<string>dixon_d.jpg</string>
+		<string>headshot-placeholder</string>
 		<key>9</key>
 		<string>ga_banner</string>
 	</dict>
@@ -446,7 +446,7 @@
 		<key>1</key>
 		<string>Movie Poster</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Photoshop</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -536,9 +536,9 @@
 		<key>0</key>
 		<string>4144:10028</string>
 		<key>1</key>
-		<string>-</string>
+		<string>Freddy Krueger</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Photoshop</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -546,9 +546,9 @@
 		<key>5</key>
 		<string>When I was a child, I always wanted to do something epic. I wanted to create. Films and graffiti art inspired me. And that’s when I found my calling. My passion for the arts grew stronger and stronger, so I decided to make it a hobby. As I graduate I will pursue my dream in becoming a special effects make-up artist for feature film and television.</string>
 		<key>6</key>
-		<string>-</string>
+		<string>angeles_d</string>
 		<key>7</key>
-		<string>Fill</string>
+		<string>Fit</string>
 		<key>8</key>
 		<string>angeles_d.jpg</string>
 		<key>9</key>
@@ -559,9 +559,9 @@
 		<key>0</key>
 		<string>4144:10029</string>
 		<key>1</key>
-		<string>-</string>
+		<string>That&apos;s 70s</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Ink – Color Pencil</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -569,7 +569,7 @@
 		<key>5</key>
 		<string>Ever since I could remember, I loved to draw. Everywhere I went, my mother had to bring paper and crayons because all I wanted to do was create my own masterpiece. I never thought now, being a senior in high school, I would still have the love for art and now making it a part of my career. I am pursuing these dreams at my dream school, Pace University, majoring in Art History and Graphic Design.</string>
 		<key>6</key>
-		<string>-</string>
+		<string>arrazola_m_art</string>
 		<key>7</key>
 		<string>Fill</string>
 		<key>8</key>
@@ -745,7 +745,7 @@
 		<key>1</key>
 		<string>Bipolar Disorder</string>
 		<key>2</key>
-		<string>Mix Media</string>
+		<string>Mixed Media</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -814,7 +814,7 @@
 		<key>1</key>
 		<string>Polygonal Portrait</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Photoshop</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -837,7 +837,7 @@
 		<key>1</key>
 		<string>Optima</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Photoshop</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -860,7 +860,7 @@
 		<key>1</key>
 		<string>Robot</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Photoshop</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -883,7 +883,7 @@
 		<key>1</key>
 		<string>Inanimate Object Gallery</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Photoshop</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -908,7 +908,7 @@
 		<key>1</key>
 		<string>Polygonal Portrait</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Photoshop</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -931,7 +931,7 @@
 		<key>1</key>
 		<string>Polygonal Portrait</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Photoshop</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -954,7 +954,7 @@
 		<key>1</key>
 		<string>Watch</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Photoshop</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -1000,7 +1000,7 @@
 		<key>1</key>
 		<string>Watch</string>
 		<key>2</key>
-		<string>-</string>
+		<string>Photoshop</string>
 		<key>3</key>
 		<string>-</string>
 		<key>4</key>
@@ -1062,97 +1062,97 @@
 		<key>9</key>
 		<string>ga_banner</string>
 	</dict>
-    <key>4144:10051</key>
-    <dict>
-        <key>0</key>
-        <string>4144:10051</string>
-        <key>1</key>
-        <string>Helvetica</string>
-        <key>2</key>
-        <string>-</string>
-        <key>3</key>
-        <string>-</string>
-        <key>4</key>
-        <string>Jia Hang Zhang</string>
-        <key>5</key>
-        <string>I am a senior Graphic Design student at PCTI. My work consists mainly of Graphic Design and a bit of traditional/digital on the side, which I am still trying to learn. In the fall of 2016, I will be attending Rutgers Mason Gross School of Visual Arts. I also plan to do some freelancing to make some money during my time in college to help pay for my books. </string>
-        <key>6</key>
-        <string>zhang_j_art</string>
-        <key>7</key>
-        <string>Fit</string>
-        <key>8</key>
-        <string>zhang_j.jpg</string>
-        <key>9</key>
-        <string>ga_banner</string>
-    </dict>
-    <key>4144:10052</key>
-    <dict>
-        <key>0</key>
-        <string>4144:10052</string>
-        <key>1</key>
-        <string>Robot</string>
-        <key>2</key>
-        <string>-</string>
-        <key>3</key>
-        <string>-</string>
-        <key>4</key>
-        <string>Alexia Morgan</string>
-        <key>5</key>
-        <string>Hi, I am senior Graphic Design student at PCTI. Over the course of these past three years, I’ve been influenced by 30’s design styles and color schemes, refined by the steampunk art style. I plan on attending the University of Hartford, where I will pursue a degree in Media Communications. At least, I hope so — if not, PCCC is cool too.</string>
-        <key>6</key>
-        <string>morgan_a_art</string>
-        <key>7</key>
-        <string>Fit</string>
-        <key>8</key>
-        <string>morgan_a.jpg</string>
-        <key>9</key>
-        <string>ga_banner</string>
-    </dict>
-    <key>4144:10053</key>
-    <dict>
-        <key>0</key>
-        <string>4144:10053</string>
-        <key>1</key>
-        <string>Octopotamus</string>
-        <key>2</key>
-        <string>-</string>
-        <key>3</key>
-        <string>-</string>
-        <key>4</key>
-        <string>Laura Feliz</string>
-        <key>5</key>
-        <string>Senior Graphic Design student. During my years in this Graphic Arts program, I have learned many skills and techniques that have greatly improved my design process. The opportunity to work as a Graphic Arts Co-op student has given me real life experience on how to work with clients. I plan on attending The College of New Jersey in the fall.</string>
-        <key>6</key>
-        <string>feliz_l_art</string>
-        <key>7</key>
-        <string>Fit</string>
-        <key>8</key>
-        <string>feliz_l.jpg</string>
-        <key>9</key>
-        <string>ga_banner</string>
-    </dict>
-    <key>4144:10054</key>
-    <dict>
-        <key>0</key>
-        <string>4144:10054</string>
-        <key>1</key>
-        <string>Robot</string>
-        <key>2</key>
-        <string>-</string>
-        <key>3</key>
-        <string>-</string>
-        <key>4</key>
-        <string>Julian Solis</string>
-        <key>5</key>
-        <string>Hello, my name is Julian Solis, and I am a student at PCTI. My field is Graphic Design, where my time is spent doing what I enjoy, which specifically is showing my creativity throughout all the forms that this field grants me. My plans are to develop my skills and character as I proceed into college, where I will then continue forward with this field.</string>
-        <key>6</key>
-        <string>solis_j2_art</string>
-        <key>7</key>
-        <string>Fit</string>
-        <key>8</key>
-        <string>solis_j2.jpg</string>
-        <key>9</key>
-        <string>ga_banner</string>
-    </dict>
+	<key>4144:10051</key>
+	<dict>
+		<key>0</key>
+		<string>4144:10051</string>
+		<key>1</key>
+		<string>Helvetica</string>
+		<key>2</key>
+		<string>Photoshop</string>
+		<key>3</key>
+		<string>-</string>
+		<key>4</key>
+		<string>Jia Hang Zhang</string>
+		<key>5</key>
+		<string>I am a senior Graphic Design student at PCTI. My work consists mainly of Graphic Design and a bit of traditional/digital on the side, which I am still trying to learn. In the fall of 2016, I will be attending Rutgers Mason Gross School of Visual Arts. I also plan to do some freelancing to make some money during my time in college to help pay for my books. </string>
+		<key>6</key>
+		<string>zhang_j_art</string>
+		<key>7</key>
+		<string>Fit</string>
+		<key>8</key>
+		<string>zhang_j.jpg</string>
+		<key>9</key>
+		<string>ga_banner</string>
+	</dict>
+	<key>4144:10052</key>
+	<dict>
+		<key>0</key>
+		<string>4144:10052</string>
+		<key>1</key>
+		<string>Robot</string>
+		<key>2</key>
+		<string>Photoshop</string>
+		<key>3</key>
+		<string>-</string>
+		<key>4</key>
+		<string>Alexia Morgan</string>
+		<key>5</key>
+		<string>Hi, I am senior Graphic Design student at PCTI. Over the course of these past three years, I’ve been influenced by 30’s design styles and color schemes, refined by the steampunk art style. I plan on attending the University of Hartford, where I will pursue a degree in Media Communications. At least, I hope so — if not, PCCC is cool too.</string>
+		<key>6</key>
+		<string>morgan_a_art</string>
+		<key>7</key>
+		<string>Fit</string>
+		<key>8</key>
+		<string>morgan_a.jpg</string>
+		<key>9</key>
+		<string>ga_banner</string>
+	</dict>
+	<key>4144:10053</key>
+	<dict>
+		<key>0</key>
+		<string>4144:10053</string>
+		<key>1</key>
+		<string>Octopotamus</string>
+		<key>2</key>
+		<string>Photoshop</string>
+		<key>3</key>
+		<string>-</string>
+		<key>4</key>
+		<string>Laura Feliz</string>
+		<key>5</key>
+		<string>Senior Graphic Design student. During my years in this Graphic Arts program, I have learned many skills and techniques that have greatly improved my design process. The opportunity to work as a Graphic Arts Co-op student has given me real life experience on how to work with clients. I plan on attending The College of New Jersey in the fall.</string>
+		<key>6</key>
+		<string>feliz_l_art</string>
+		<key>7</key>
+		<string>Fit</string>
+		<key>8</key>
+		<string>feliz_l.jpg</string>
+		<key>9</key>
+		<string>ga_banner</string>
+	</dict>
+	<key>4144:10054</key>
+	<dict>
+		<key>0</key>
+		<string>4144:10054</string>
+		<key>1</key>
+		<string>Robot</string>
+		<key>2</key>
+		<string>Photoshop</string>
+		<key>3</key>
+		<string>-</string>
+		<key>4</key>
+		<string>Julian Solis</string>
+		<key>5</key>
+		<string>Hello, my name is Julian Solis, and I am a student at PCTI. My field is Graphic Design, where my time is spent doing what I enjoy, which specifically is showing my creativity throughout all the forms that this field grants me. My plans are to develop my skills and character as I proceed into college, where I will then continue forward with this field.</string>
+		<key>6</key>
+		<string>solis_j2_art</string>
+		<key>7</key>
+		<string>Fit</string>
+		<key>8</key>
+		<string>solis_j2.jpg</string>
+		<key>9</key>
+		<string>ga_banner</string>
+	</dict>
 </dict>
 </plist>

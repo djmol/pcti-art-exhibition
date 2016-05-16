@@ -44,7 +44,7 @@
     
     // Set user defaults
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"settingAutoUpdate"];
-    [[NSUserDefaults standardUserDefaults] setValue:@"5" forKey:@"autoUpdateRefreshRate"];
+    [[NSUserDefaults standardUserDefaults] setValue:@"8" forKey:@"autoUpdateRefreshRate"];
     //[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"hasSeenIntro"];
     
     // Set color scheme for app-wide use

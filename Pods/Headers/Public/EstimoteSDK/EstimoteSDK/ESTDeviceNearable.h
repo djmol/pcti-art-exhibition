@@ -1,0 +1,5 @@
+XSym
+0096
+b8f276c99f21c0c42bb352b3c0656921
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceNearable.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

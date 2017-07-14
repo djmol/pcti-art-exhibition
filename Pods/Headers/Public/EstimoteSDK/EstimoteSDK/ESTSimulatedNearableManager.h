@@ -1,0 +1,5 @@
+XSym
+0106
+05395c4b6d390df5ca6bf4d76a68a9a9
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSimulatedNearableManager.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

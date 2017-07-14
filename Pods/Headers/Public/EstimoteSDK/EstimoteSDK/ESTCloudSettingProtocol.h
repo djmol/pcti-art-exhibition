@@ -1,0 +1,5 @@
+XSym
+0102
+9e7a4da4bba497ff3e25d0fab1b77ee9
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudSettingProtocol.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

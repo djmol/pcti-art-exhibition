@@ -1,0 +1,5 @@
+XSym
+0078
+7d4a13418c429654ae32434ecf4c764f
+../../../ChameleonFramework/Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

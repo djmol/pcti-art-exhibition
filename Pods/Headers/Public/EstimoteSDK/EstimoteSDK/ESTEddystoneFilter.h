@@ -1,0 +1,5 @@
+XSym
+0097
+e7fbc196de3037431909ba0337835e50
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilter.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

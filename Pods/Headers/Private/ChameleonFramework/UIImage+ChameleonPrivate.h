@@ -1,0 +1,5 @@
+XSym
+0078
+b055899dacd9b8811e2f1d3bc708d929
+../../../ChameleonFramework/Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

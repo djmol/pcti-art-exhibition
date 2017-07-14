@@ -1,0 +1,5 @@
+XSym
+0094
+839338c18c475c4a72dd6dfa81a6f6ea
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneUID.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

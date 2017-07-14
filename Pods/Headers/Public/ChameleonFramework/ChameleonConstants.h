@@ -1,0 +1,5 @@
+XSym
+0072
+61be3d65497c88685ccc577c69f921fa
+../../../ChameleonFramework/Pod/Classes/Objective-C/ChameleonConstants.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

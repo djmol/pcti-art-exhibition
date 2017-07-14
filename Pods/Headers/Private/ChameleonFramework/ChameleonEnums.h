@@ -1,0 +1,5 @@
+XSym
+0068
+b6027f4e893d94cfba81b4cd72b936f0
+../../../ChameleonFramework/Pod/Classes/Objective-C/ChameleonEnums.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

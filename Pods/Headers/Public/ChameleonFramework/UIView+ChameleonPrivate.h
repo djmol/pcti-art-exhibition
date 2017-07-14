@@ -1,0 +1,5 @@
+XSym
+0077
+e6ff15b4fffcb9b7562ca8166f30cdfc
+../../../ChameleonFramework/Pod/Classes/Objective-C/UIView+ChameleonPrivate.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

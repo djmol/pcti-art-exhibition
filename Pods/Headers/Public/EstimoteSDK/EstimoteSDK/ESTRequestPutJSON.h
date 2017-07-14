@@ -1,0 +1,5 @@
+XSym
+0096
+311cfc40eef16e16e22e98b5c3036d5f
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPutJSON.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

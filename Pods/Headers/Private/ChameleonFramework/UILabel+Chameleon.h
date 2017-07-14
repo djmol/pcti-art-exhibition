@@ -1,0 +1,5 @@
+XSym
+0071
+c206951dc41e0f5978c07df7b95316b4
+../../../ChameleonFramework/Pod/Classes/Objective-C/UILabel+Chameleon.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

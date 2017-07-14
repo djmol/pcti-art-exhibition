@@ -1,0 +1,5 @@
+XSym
+0097
+069aca97b1c92a0c67f02e707630b435
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTOrientationRule.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

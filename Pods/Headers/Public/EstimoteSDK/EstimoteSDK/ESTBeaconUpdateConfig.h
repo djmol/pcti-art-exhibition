@@ -1,0 +1,5 @@
+XSym
+0100
+fc5f3a7ee54beb1b2bbce8275a5bc61e
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconUpdateConfig.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

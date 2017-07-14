@@ -1,0 +1,5 @@
+XSym
+0088
+2e570138e09853ea57199c6a6eb4ef0b
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDevice.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

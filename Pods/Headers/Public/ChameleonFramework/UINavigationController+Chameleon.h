@@ -1,0 +1,5 @@
+XSym
+0086
+01bf913c1d40846995a93e527b824cfc
+../../../ChameleonFramework/Pod/Classes/Objective-C/UINavigationController+Chameleon.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

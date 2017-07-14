@@ -1,0 +1,5 @@
+XSym
+0072
+44efd178f8376295875d734d095f7248
+../../../ChameleonFramework/Pod/Classes/Objective-C/UIAppearance+Swift.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

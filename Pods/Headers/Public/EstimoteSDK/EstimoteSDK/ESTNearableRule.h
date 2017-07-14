@@ -1,0 +1,5 @@
+XSym
+0094
+ec7d0bc6fb9670a7de66f3c2f2143ec5
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableRule.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

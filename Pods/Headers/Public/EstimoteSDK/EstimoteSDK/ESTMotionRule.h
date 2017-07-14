@@ -1,0 +1,5 @@
+XSym
+0092
+7ee3c11a40718b546736cc2dc0e8a028
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTMotionRule.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

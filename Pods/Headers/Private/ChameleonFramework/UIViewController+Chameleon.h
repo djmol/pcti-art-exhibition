@@ -1,0 +1,5 @@
+XSym
+0080
+97f0855d7224fb2a1a1d1bced084cc69
+../../../ChameleonFramework/Pod/Classes/Objective-C/UIViewController+Chameleon.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

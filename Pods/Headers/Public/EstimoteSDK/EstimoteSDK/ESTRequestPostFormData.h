@@ -1,0 +1,5 @@
+XSym
+0101
+59ac3ee42ad8f6391f4a73ff73635694
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPostFormData.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

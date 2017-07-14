@@ -1,0 +1,5 @@
+XSym
+0072
+48479237061958ff942e75f3066e6bef
+../../../ChameleonFramework/Pod/Classes/Objective-C/UIButton+Chameleon.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

@@ -1,0 +1,5 @@
+XSym
+0095
+3b4b9e72b40d7120176c80b5cc95eb35
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestDelete.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

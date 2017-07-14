@@ -1,0 +1,15 @@
+PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - EstimoteSDK (3.8.1)
+
+DEPENDENCIES:
+  - ChameleonFramework
+  - EstimoteSDK
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  EstimoteSDK: 34a31f7ad07bfeb58015f7decd01e1c20cbe8c45
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,5 @@
+XSym
+0101
+e6b473fa95a39eb925cc4c17f7b3f541
+../../../../EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetNearables.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

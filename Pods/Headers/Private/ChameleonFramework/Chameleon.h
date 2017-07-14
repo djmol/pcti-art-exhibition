@@ -1,0 +1,5 @@
+XSym
+0063
+aa181552da982ea4176ef08347cf26ff
+../../../ChameleonFramework/Pod/Classes/Objective-C/Chameleon.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
